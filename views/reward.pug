@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= reward.type
+  h5 Winner is #{winner_name}
+  p= reward.detail
+  hr
+  if user
+    if user.id ==reward.winner_name 
+      a.btn.btn-primary(href='/rewards/edit/'+reward._id) Edit
+      a.btn.btn-danger.delete-reward(href="#", data-id=reward._id) Delete

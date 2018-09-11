@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/rewards/add')
+    #form-group
+      label Type:
+      br
+      input.form-control(name='type', type='text')
+    #form-group
+      label Detail:
+      br
+      textarea.form-control(name='detail', type='text')
+    br
+    input.btn.btn-primary(type='submit',value='Submit')

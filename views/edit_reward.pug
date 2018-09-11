@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/rewards/edit/'+reward._id)
+    #form-group
+      label Type:
+      br
+      input.form-control(name='type', type='text', value=reward.type)
+    #form-group
+      label Winner Name:
+      br
+      input.form-control(name='winner_name', type='text', value=reward.winner_name)
+    #form-group
+      label Detail:
+      br
+      textarea.form-control(name='detail')= reward.detail
+    br
+    input.btn.btn-primary(type='submit',value='Submit')
